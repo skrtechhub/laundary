@@ -1,0 +1,349 @@
+/* FreshCare Laundry - Tailwind CSS Configuration */
+/* Generated: 2025-12-30 */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors - Sky Blue for approachable professionalism */
+    --color-primary: #87CEEB; /* sky-blue */
+    --color-primary-50: #F0F9FF; /* sky-blue-50 */
+    --color-primary-100: #E0F2FE; /* sky-blue-100 */
+    --color-primary-200: #BAE6FD; /* sky-blue-200 */
+    --color-primary-300: #7DD3FC; /* sky-blue-300 */
+    --color-primary-400: #38BDF8; /* sky-blue-400 */
+    --color-primary-500: #87CEEB; /* sky-blue-500 - main */
+    --color-primary-600: #0284C7; /* sky-blue-600 */
+    --color-primary-700: #0369A1; /* sky-blue-700 */
+    --color-primary-800: #075985; /* sky-blue-800 */
+    --color-primary-900: #0C4A6E; /* sky-blue-900 */
+
+    /* Secondary Colors - Navy Blue for authority and premium positioning */
+    --color-secondary: #1E3A8A; /* navy-blue */
+    --color-secondary-50: #EFF6FF; /* navy-blue-50 */
+    --color-secondary-100: #DBEAFE; /* navy-blue-100 */
+    --color-secondary-200: #BFDBFE; /* navy-blue-200 */
+    --color-secondary-300: #93C5FD; /* navy-blue-300 */
+    --color-secondary-400: #60A5FA; /* navy-blue-400 */
+    --color-secondary-500: #3B82F6; /* navy-blue-500 */
+    --color-secondary-600: #2563EB; /* navy-blue-600 */
+    --color-secondary-700: #1D4ED8; /* navy-blue-700 */
+    --color-secondary-800: #1E3A8A; /* navy-blue-800 - main */
+    --color-secondary-900: #1E40AF; /* navy-blue-900 */
+
+    /* Accent Colors - Fresh Green for success and eco-friendly messaging */
+    --color-accent: #10B981; /* emerald-500 */
+    --color-accent-50: #ECFDF5; /* emerald-50 */
+    --color-accent-100: #D1FAE5; /* emerald-100 */
+    --color-accent-200: #A7F3D0; /* emerald-200 */
+    --color-accent-300: #6EE7B7; /* emerald-300 */
+    --color-accent-400: #34D399; /* emerald-400 */
+    --color-accent-500: #10B981; /* emerald-500 - main */
+    --color-accent-600: #059669; /* emerald-600 */
+    --color-accent-700: #047857; /* emerald-700 */
+    --color-accent-800: #065F46; /* emerald-800 */
+    --color-accent-900: #064E3B; /* emerald-900 */
+
+    /* Background Colors */
+    --color-background: #FAFBFC; /* soft-white */
+    --color-surface: #F1F5F9; /* slate-100 */
+    --color-surface-hover: #E2E8F0; /* slate-200 */
+
+    /* Text Colors */
+    --color-text-primary: #1F2937; /* gray-800 */
+    --color-text-secondary: #6B7280; /* gray-500 */
+    --color-text-tertiary: #9CA3AF; /* gray-400 */
+    --color-text-inverse: #FFFFFF; /* white */
+
+    /* Semantic Colors */
+    --color-success: #059669; /* emerald-600 */
+    --color-success-light: #D1FAE5; /* emerald-100 */
+    --color-warning: #D97706; /* amber-600 */
+    --color-warning-light: #FEF3C7; /* amber-100 */
+    --color-error: #DC2626; /* red-600 */
+    --color-error-light: #FEE2E2; /* red-100 */
+    --color-info: #3B82F6; /* blue-500 */
+    --color-info-light: #DBEAFE; /* blue-100 */
+
+    /* Border Colors */
+    --color-border: #E5E7EB; /* gray-200 */
+    --color-border-light: #F3F4F6; /* gray-100 */
+    --color-border-dark: #D1D5DB; /* gray-300 */
+
+    /* Shadow Definitions */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    /* Transition Timing */
+    --transition-fast: 150ms;
+    --transition-base: 300ms;
+    --transition-slow: 500ms;
+    --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-text-primary font-body antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline font-semibold text-text-primary;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl leading-snug;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl lg:text-3xl leading-snug;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl lg:text-2xl leading-normal;
+  }
+
+  h6 {
+    @apply text-base md:text-lg lg:text-xl leading-normal;
+  }
+
+  p {
+    @apply text-base leading-relaxed text-text-primary;
+  }
+
+  a {
+    @apply transition-colors duration-300 ease-out;
+  }
+
+  button {
+    @apply transition-all duration-300 ease-out;
+  }
+}
+
+@layer components {
+  /* Button Components */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-cta font-semibold text-base transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply bg-secondary text-text-inverse hover:bg-secondary-700 focus:ring-secondary-500 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-primary text-text-primary hover:bg-primary-600 focus:ring-primary-500 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-text-inverse hover:bg-accent-600 focus:ring-accent-500 shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply border-2 border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-text-inverse focus:ring-secondary-500;
+  }
+
+  .btn-ghost {
+    @apply text-secondary hover:bg-secondary-50 focus:ring-secondary-500;
+  }
+
+  /* Card Components */
+  .card {
+    @apply bg-white rounded-xl shadow-md border border-border transition-all duration-300 ease-out;
+  }
+
+  .card-hover {
+    @apply hover:shadow-lg hover:-translate-y-1;
+  }
+
+  .card-surface {
+    @apply bg-surface rounded-xl p-6 border border-border-light;
+  }
+
+  /* Input Components */
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-border bg-white text-text-primary placeholder-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 ease-out;
+  }
+
+  .input-error {
+    @apply border-error focus:ring-error;
+  }
+
+  .input-success {
+    @apply border-success focus:ring-success;
+  }
+
+  /* Badge Components */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-success {
+    @apply bg-success-light text-success;
+  }
+
+  .badge-warning {
+    @apply bg-warning-light text-warning;
+  }
+
+  .badge-error {
+    @apply bg-error-light text-error;
+  }
+
+  .badge-info {
+    @apply bg-info-light text-info;
+  }
+
+  /* Alert Components */
+  .alert {
+    @apply p-4 rounded-lg border flex items-start gap-3;
+  }
+
+  .alert-success {
+    @apply bg-success-light border-success text-success;
+  }
+
+  .alert-warning {
+    @apply bg-warning-light border-warning text-warning;
+  }
+
+  .alert-error {
+    @apply bg-error-light border-error text-error;
+  }
+
+  .alert-info {
+    @apply bg-info-light border-info text-info;
+  }
+
+  /* Container Components */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section Components */
+  .section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .section-sm {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Gradient Components */
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary-400 to-primary-600;
+  }
+
+  .gradient-secondary {
+    @apply bg-gradient-to-br from-secondary-700 to-secondary-900;
+  }
+
+  .gradient-hero {
+    @apply bg-gradient-to-br from-primary-300 via-primary-400 to-primary-500;
+  }
+
+  /* Text Utilities */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-700;
+  }
+
+  /* Technical Text (Pricing, Timing) */
+  .text-technical {
+    @apply font-mono text-sm tracking-wide;
+  }
+}
+
+@layer utilities {
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Hover Lift Effect */
+  .hover-lift {
+    @apply transition-transform duration-300 ease-out hover:-translate-y-1;
+  }
+
+  /* Focus Visible Utilities */
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2;
+  }
+
+  /* Scroll Behavior */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-border-dark rounded-full hover:bg-text-secondary;
+  }
+}
